@@ -16,7 +16,7 @@ CLIENT_SECRET = 'dab4fb1334df411aa9379c565ae41334'
 
 AUTH_URL = 'https://accounts.spotify.com/api/token'
 
-# POST
+
 auth_response = requests.post(AUTH_URL, {
     'grant_type': 'client_credentials',
     'client_id': CLIENT_ID,
@@ -38,7 +38,7 @@ BASE_URL = 'https://api.spotify.com/v1/'
 artist_id = ['5M52tdBnJaKSvOpJGz8mfZ']
 
 
-# pull all artists albums
+# obteniendo todos los albumes del artista
 for artista_id in artist_id:
             r = requests.get(BASE_URL + 'artists/' + artista_id + '/top-tracks?market=ES' ,
                              headers=headers,
